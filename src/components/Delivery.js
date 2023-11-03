@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/img-redundant-alt */
 import React from 'react';
 const Delivery = () => {
     return (
@@ -9,6 +10,7 @@ const Delivery = () => {
                 <img
                     className="w-full md:w-auto mx-auto my-4 max-w-[550px]"
                     src="https://res.cloudinary.com/ehizeex-shop/image/upload/v1672676822/NetflixApp/FC_two_phones.6ec9a842f905769677f9_m91off.webp"
+                    alt="Image"
                 />
                 <div className="flex flex-col justify-center">
                     <p className="text-[#00df9a] font-bold">Get The App</p>
