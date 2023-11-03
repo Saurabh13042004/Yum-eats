@@ -4,7 +4,7 @@ const NewsLetter = () => {
     return (
         <div className='max-w-[1520px] m-auto text-white px-4 bg-[#24262b]'>
             <div className='mx-auto grid lg:grid-cols-3'>
-                <div className='lg:col-span-2 my-4 '>
+                <div className='lg:col-span-2 w-100 flex flex-col align-middle justify-end'>
                     <h1>Need advice on how to improve your flow?</h1>
                     <p>Sign up for our newsletter and get free tips and tricks.</p>
                 </div>

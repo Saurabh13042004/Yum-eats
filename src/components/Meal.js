@@ -1,8 +1,11 @@
 import React,{useState} from 'react';
 import {AiOutlineArrowRight} from 'react-icons/ai'
 import { mealData } from '../data/data';
+
 const Meal = ()=>{
     const [foods, setFoods] = useState(mealData)
+ 
+
     const filterCat = (category)=>{
         setFoods(
             mealData.filter((item)=>{return item.category === category
@@ -45,7 +48,7 @@ const Meal = ()=>{
         <p className='bg-orange-700 h-18 w-18 rounded-full -mt-10 text-white py-4 px-2 border-8 font-bold'>{item.price}</p>
         </div>
         <div className='pl-2 py-4 -mt-7'>
-            <p className='flex items-center text-indigo-600'>view more
+            <p className='flex items-center text-indigo-600'> Add to Cart
             <AiOutlineArrowRight className='w-5 ml-2'/>
             </p>
             </div>

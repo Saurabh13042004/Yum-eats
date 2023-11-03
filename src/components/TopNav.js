@@ -4,6 +4,8 @@ import {BsFillCartFill, BsPerson} from 'react-icons/bs'
 import{TbTruckReturn} from 'react-icons/tb'
 import{FaGoogleWallet} from 'react-icons/fa'
 import {  MdOutlineFavorite } from 'react-icons/md'; 
+import { Link } from 'react-router-dom'
+
 import { MdHelp } from 'react-icons/md'; // Ensure you have imported the icon
 const TopNav = () => {
     const [sideNav,setSideNav] = useState(false)
@@ -14,9 +16,11 @@ const TopNav = () => {
             <div onClick = {()=> setSideNav(!sideNav)}className='cursor-pointer'>
             <AiOutlineMenu size={25}/>
             </div>
+            <Link to='/'>
             <h1 className="text-2xl sm:text-3xl lg:text-4xl px-2"> yum
             <span className='font-bold'>Eats</span>
                 </h1>
+                </Link>
          
             <div className='hidden lg:flex items-center bg-gray-200 rounded-full p-1 text-[14px]'>
                 <p className='bg-orange-700 text-white rounded-full p-2 text-bold'>Free</p>
@@ -28,9 +32,13 @@ const TopNav = () => {
                 
             <input className='bg-transparent p-2 w-full focus:outline-none' type='text' placeholder='search meals'></input>
             </div>
+            <Link to='/cart'>
+
             <button className='bg-orange-700 text-white hidden md:flex items-center py-2 rounded-full'>
             <BsFillCartFill size={20}/>Cart
             </button>
+            </Link>
+       
             {
                 sideNav ? ( 
                     <div className='bg-black/60 fixed w-full h-screen z-10 top-0 left-0'
