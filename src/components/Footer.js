@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaDribbbleSquare, FaFacebookSquare, FaGithubSquare, FaInstagram, FaTwitterSquare } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+
 
 const Footer = () => {
   return (
