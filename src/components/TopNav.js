@@ -17,25 +17,27 @@ const TopNav = () => {
             <AiOutlineMenu size={25}/>
             </div>
             <Link to='/'>
-            <h1 className="text-2xl sm:text-3xl lg:text-4xl px-2"> yum
+      
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl px-5"> yum
             <span className='font-bold'>Eats</span>
                 </h1>
+        
                 </Link>
          
             <div className='hidden lg:flex items-center bg-gray-200 rounded-full p-1 text-[14px]'>
-                <p className='bg-orange-700 text-white rounded-full p-2 text-bold'>Free</p>
+                <p className='bg-orange-700 text-white rounded-full p-3 text-bold'>Free</p>
                 <p className='p-2 text-bold'>Delivery</p>
                 </div>
             </div>
-            <div className='bg-gray-200 rounded-full flex items-center px-2 w-[200px] sm:w-[400px] lg:w-[500px]'>
+            <div className='bg-gray-200 rounded-full flex items-center px-3 w-[200px] sm:w-[400px] lg:w-[500px]'>
             <AiOutlineSearch size={25}/>
                 
-            <input className='bg-transparent p-2 w-full focus:outline-none' type='text' placeholder='search meals'></input>
+            <input className='bg-transparent p-3 w-full focus:outline-none' type='text' placeholder='Search Meals'></input>
             </div>
             <Link to='/cart'>
 
-            <button className='bg-orange-700 text-white hidden md:flex items-center py-2 rounded-full'>
-            <BsFillCartFill size={20}/>Cart
+            <button className='bg-orange-700 text-white hidden md:flex items-center px-5 py-3  rounded-full hover:bg-white hover:text-orange-700 transition-all border-orange-700'>
+            <BsFillCartFill size={20} className='mx-1'/>Cart
             </button>
             </Link>
        

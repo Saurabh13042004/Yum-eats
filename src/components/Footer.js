@@ -17,10 +17,10 @@ const Footer = () => {
           </p>
           <div className='flex justify-between md:w-[75%] my-6'>
             <FaFacebookSquare size={30} />
-            <a href="https://www.instagram.com/saurabh._shukla._">  
+            <a href="">  
                       <FaInstagram size={30} />
                       </a>
-
+            
             <FaGithubSquare size={30} />
             <FaTwitterSquare size={30} />
             <FaDribbbleSquare size={30} />
