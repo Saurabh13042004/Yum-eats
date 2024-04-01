@@ -1,23 +1,34 @@
-import React from 'react'
-import { categories } from '../data/data'
+import React from 'react';
+import { categories } from '../data/data';
+import { FaPizzaSlice, FaHamburger, FaCarrot, FaIceCream, FaCoffee, FaCocktail } from 'react-icons/fa';
+
+const iconMapping = {
+    "Pizza": <FaPizzaSlice />,
+    "Burger": <FaHamburger />,
+    "Salad": <FaCarrot />,
+    "Ice Cream": <FaIceCream />,
+    "Coffee": <FaCoffee />,
+    "Cocktail": <FaCocktail />
+};
+
 const Categories = () => {
-    console.log(categories)
     return (
-        <div className='max-w-[1520px] m-auto px-4 py-4'>
-            <h1 className='text-orange-500 font-bold text-2xl text-center py-2'>
+        <div className='max-w-screen-xl mx-auto px-4 py-8'>
+            <h1 className='text-orange-500 font-bold text-3xl text-center mb-6'>
                 Trending Categories
             </h1>
-               <div className='grid grid-cols-2 md:grid-cols-6 gap-5 py-5 px-2'>
-                {
-                    categories.map((item)=>{
-                        return <div key ={item.id}className='p-4 flex justify-center items-center hover:scale-105 duration-300 '>
-                        <img className='object-cover rounded-xl w-40 h-10 cursor-pointer shadow-xl' src={item.image} alt={item.name}/>
+            <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6'>
+                {categories.map((item) => (
+                    <div key={item.id} className='flex flex-col items-center transform transition-transform hover:scale-105'>
+                        <div className='w-16 h-16 rounded-full bg-gray-200 flex items-center justify-center'>
+                            {iconMapping[item.name]}
                         </div>
-                    })}
-                
-
+                        <p className='mt-2 text-center'>{item.name}</p>
+                    </div>
+                ))}
             </div>
         </div>
-    )
-}
-export default Categories
+    );
+};
+
+export default Categories;

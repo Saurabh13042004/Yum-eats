@@ -1,112 +1,59 @@
 import React from 'react';
 import { FaDribbbleSquare, FaFacebookSquare, FaGithubSquare, FaInstagram, FaTwitterSquare } from 'react-icons/fa';
 
-
 const Footer = () => {
-  return (
-    <div className='max-w-[1520px] m-auto px-4 py-2 bg-[#24262b]'>
-      <div className='py-16 px-4 grid lg:grid-cols-3 gap-8 text-gray-300'>
-        <div>
-          <h1 className='w-full text-3xl font-bold text-orange-500'>
-            YumEats
-          </h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Id quibusdam, voluptatum, quos, quas quia voluptate
-            accusantium quod voluptatibus quae doloribus
-          </p>
-          <div className='flex justify-between md:w-[75%] my-6'>
-            <FaFacebookSquare size={30} />
-            <a href="https://www.instagram.com/saurabh._shukla._">  
-                      <FaInstagram size={30} />
-                      </a>
-
-            <FaGithubSquare size={30} />
-            <FaTwitterSquare size={30} />
-            <FaDribbbleSquare size={30} />
-          </div>
+    return (
+        <div className='w-full bg-teal-900 text-gray-100 py-12'>
+            <div className='max-w-screen-xl mx-auto px-4'>
+                <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+                    {/* Logo and Description */}
+                    <div className='md:col-span-1'>
+                        <h1 className='text-3xl font-bold text-teal-400 mb-4'>YumEats</h1>
+                        <p className='text-gray-300 mb-4'>
+                            Experience the convenience of having your favorite meals delivered right to your doorstep. Our app offers a wide variety of options to choose from, ensuring there's always something for everyone. Whether you're craving pizza, salad, or a burger, we've got you covered.
+                        </p>
+                        <div className='flex space-x-4'>
+                            <a href="https://www.facebook.com/"> <FaFacebookSquare size={30} /></a>
+                            <a href="https://www.instagram.com/saurabh._shukla._"> <FaInstagram size={30} /></a>
+                            <a href="https://github.com/"> <FaGithubSquare size={30} /></a>
+                            <a href="https://twitter.com/"> <FaTwitterSquare size={30} /></a>
+                            <a href="https://dribbble.com/"> <FaDribbbleSquare size={30} /></a>
+                        </div>
+                    </div>
+                    {/* Locations */}
+                    <div className='grid grid-cols-2 sm:grid-cols-3 gap-y-4 md:gap-y-0'>
+                        <div>
+                            <h6 className='font-medium text-gray-300 mb-2'>Location</h6>
+                            <ul className='text-gray-400'>
+                                <li>New York</li>
+                                <li>USA</li>
+                                <li>India</li>
+                                <li>Canada</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h6 className='font-medium text-gray-300 mb-2'>Location</h6>
+                            <ul className='text-gray-400'>
+                                <li>New York</li>
+                                <li>USA</li>
+                                <li>India</li>
+                                <li>Canada</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h6 className='font-medium text-gray-300 mb-2'>Location</h6>
+                            <ul className='text-gray-400'>
+                                <li>New York</li>
+                                <li>USA</li>
+                                <li>India</li>
+                                <li>Canada</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div className='lg:col-span-2 flex justify-between mt-0 '>
-            <div>
-                <h6 className='font-medium text-[#9b9b9b]'>
-                Location
-                </h6>
-                <ul>
-                  <li className='py-2 text-sm'>
-                    New York
-                    </li>  
-                    <li className='py-2 text-sm'>
-                        USA
-                    </li>  
-                    <li className='py-2 text-sm'>
-                        India
-                    </li>  
-                    <li className='py-2 text-sm'>
-                        Canada
-                    </li>  
-                </ul>
-            </div>
-            <div>
-                <h6 className='font-medium text-[#9b9b9b]'>
-                Location
-                </h6>
-                <ul>
-                  <li className='py-2 text-sm'>
-                    New York
-                    </li>  
-                    <li className='py-2 text-sm'>
-                        USA
-                    </li>  
-                    <li className='py-2 text-sm'>
-                        India
-                    </li>  
-                    <li className='py-2 text-sm'>
-                        Canada
-                    </li>  
-                </ul>
-            </div>
-            <div>
-                <h6 className='font-medium text-[#9b9b9b]'>
-                Location
-                </h6>
-                <ul>
-                  <li className='py-2 text-sm'>
-                    New York
-                    </li>  
-                    <li className='py-2 text-sm'>
-                        USA
-                    </li>  
-                    <li className='py-2 text-sm'>
-                        India
-                    </li>  
-                    <li className='py-2 text-sm'>
-                        Canada
-                    </li>  
-                </ul>
-            </div>
-            <div>
-                <h6 className='font-medium text-[#9b9b9b]'>
-                Location
-                </h6>
-                <ul>
-                  <li className='py-2 text-sm'>
-                    New York
-                    </li>  
-                    <li className='py-2 text-sm'>
-                        USA
-                    </li>  
-                    <li className='py-2 text-sm'>
-                        India
-                    </li>  
-                    <li className='py-2 text-sm'>
-                        Canada
-                    </li>  
-                </ul>
-            </div>
-            </div>
-      </div>
-    </div>
-  );
+    );
 };
 
 export default Footer;

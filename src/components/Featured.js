@@ -1,62 +1,61 @@
 import React, { useState } from 'react';
-import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs';
-import { RxDotFilled } from 'react-icons/rx';
+import { BsChevronLeft, BsChevronRight } from 'react-icons/bs';
 
 const Featured = () => {
     const sliders = [
         {
-            url:
-                'https://res.cloudinary.com/ehizeex-shop/image/upload/v1672672076/NetflixApp/burger_emxbtv.jpg',
+            url: 'https://res.cloudinary.com/ehizeex-shop/image/upload/v1672672076/NetflixApp/burger_emxbtv.jpg',
         },
         {
-            url:
-                'https://res.cloudinary.com/ehizeex-shop/image/upload/v1672672452/NetflixApp/pizza_osjb4f.jpg',
+            url: 'https://res.cloudinary.com/ehizeex-shop/image/upload/v1672672452/NetflixApp/pizza_osjb4f.jpg',
         },
         {
-            url:
-                'https://res.cloudinary.com/ehizeex-shop/image/upload/v1672672612/NetflixApp/ric_a4ewxo.jpg',
+            url: 'https://res.cloudinary.com/ehizeex-shop/image/upload/v1672672612/NetflixApp/ric_a4ewxo.jpg',
         },
     ];
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const prevSlider = () => {
-    const isFirstSlide = currentIndex === 0;
-    const newIndex = isFirstSlide ? sliders.length - 1 : currentIndex - 1;
-    setCurrentIndex(newIndex); 
-    }
-    const nextSlider = () => {
-        const isFirstSlide = currentIndex === sliders.length - 1;
-        const newIndex = isFirstSlide ? 0 : currentIndex + 1;
+        const newIndex = (currentIndex - 1 + sliders.length) % sliders.length;
         setCurrentIndex(newIndex);
-    }
-    const moveToNextSlide = (slideindex) => {
-        setCurrentIndex(slideindex);
+    };
 
-    }
+    const nextSlider = () => {
+        const newIndex = (currentIndex + 1) % sliders.length;
+        setCurrentIndex(newIndex);
+    };
+
+    const moveToSlide = (index) => {
+        setCurrentIndex(index);
+    };
+
     return (
-        <div className='max-w-[1520px] h-[400px] w-full py-4 px-4 relative group'>
+        <div className="max-w-[1520px] h-[400px] relative mx-auto">
             <div
-                className='w-full h-full rounded-2xl bg-center bg-cover duration-500'
+                className="w-full h-full rounded-2xl bg-cover duration-500"
                 style={{ backgroundImage: `url(${sliders[currentIndex].url})` }}
             ></div>
-            <div className=' hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-orange-500 text-white'>
-                <BsChevronCompactLeft  onClick={prevSlider}/>
-
+            <div className="absolute top-1/2 transform -translate-y-1/2 left-5 text-3xl cursor-pointer bg-gray-200 rounded-full p-2">
+                <BsChevronLeft onClick={prevSlider} className="text-orange-500" />
             </div>
-            <div className=' hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-orange-500 text-white'>
-                <BsChevronCompactRight onClick={nextSlider}/>
-
+            <div className="absolute top-1/2 transform -translate-y-1/2 right-5 text-3xl cursor-pointer bg-gray-200 rounded-full p-2">
+                <BsChevronRight onClick={nextSlider} className="text-orange-500" />
             </div>
-        <div className='flex top-4 justify-center py-2'>
-            {sliders.map((sliderItem, slideindex) => (
-                <div className='text-2xl cursor-pointer' key={slideindex} onClick={() => moveToNextSlide(slideindex)}>
-                    <RxDotFilled />
-                </div>
-            ))}
-        </div>
+            <div className="absolute bottom-4 flex justify-center w-full">
+                {sliders.map((_, index) => (
+                    <div
+                        key={index}
+                        className={`text-2xl mx-1 cursor-pointer ${
+                            index === currentIndex ? 'text-orange-500' : 'text-gray-300'
+                        }`}
+                        onClick={() => moveToSlide(index)}
+                    >
+                        &bull;
+                    </div>
+                ))}
+            </div>
         </div>
     );
-    
 };
 
 export default Featured;
