@@ -37,13 +37,13 @@ export const topPicks = [
   },
   {
     id: 7,
-    title: 'jollof rice',
+    title: 'Jollof rice',
     price: 150,
     img: 'https://res.cloudinary.com/ehizeex-shop/image/upload/v1672332323/NetflixApp/jollof_rice_gbzosf.webp',
   },
   {
     id: 8,
-    title: 'chiken burger',
+    title: 'Chicken burger',
     price: 300,
     img: 'https://res.cloudinary.com/ehizeex-shop/image/upload/v1672332323/NetflixApp/chiken_burger_ncsmeh.webp',
   },
@@ -62,7 +62,7 @@ export const topPicks = [
   {
     id: 11,
     title: 'chinese pizza',
-    price: 900,
+    price: 300,
     img: 'https://res.cloudinary.com/ehizeex-shop/image/upload/v1672324456/NetflixApp/chinese_pizza_kgnbo1.jpg',
   },
 ];
